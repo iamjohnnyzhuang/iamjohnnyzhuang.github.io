@@ -20,7 +20,7 @@ categories: [shell]
 这个时候我们可以借助Shell的find和grep操作。先给出这个问题的解答。
 
 ``
-find . | xargs grep “power by johnny-zhuang”
+find . | xargs grep -r “power by johnny-zhuang”
 ``
 
 find 操作查找当前目录下的所有文件，然后经过xargs操作。为什么用xargs操作呢？
@@ -29,7 +29,7 @@ find 操作查找当前目录下的所有文件，然后经过xargs操作。为�
 
 简而言之使用了xargs防止搜索的文件列表太长的情况。
 
-对于每个小片段进行grep操作。这里grep直接搜索想要的字符串。如果要搜索的是正则表达式可以用
+对于每个小片段进行grep操作。加入-r操作让grep可以进行递归搜索。这里grep直接搜索想要的字符串。如果要搜索的是正则表达式可以用
 
 ``
 grep -e  “正则表达式”
