@@ -1,21 +1,51 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+title: Johnny-Zhuang's Technology Blog
+description: My Personal Technology Blog
+author: Johnny-Zhuang
+github: https://github.com/iamjohnnyzhuang
+about: LOVE CODE,LOVE LIFE,LOVE DAWN.
+disqus_shortname: jy
+# google_analytics: UA-XXXXXXXX-Y
 
-# Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+enableTags: true
+tagarray: []
 
-# Build settings
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
+
+social:
+    - icon: fa-weibo
+      link: "http://weibo.com/1936027247/profile?topnav=1&wvr=6"
+    # - icon: fa-skype
+      # link: "#"
+    # - icon: fa-twitter
+      # link: "https://twitter.com/agusmakmun6"
+    - icon: fa-linkedin
+      link: "http://www.linkedin.com/?trk=nav_lingying_logo"
+    # - icon: fa-stack-exchange
+      # link: "#"
+
+# share:
+  # twitter_username: agusmakmun6
+  # fb_appid: 1749788565247320
+
+urls:
+    - text: About Me
+      url: /about/
+    - text: Projects
+      url: /projects/
+    - text: Github
+      url: https://github.com/iamjohnnyzhuang
+    - text: XML Feed
+      url: /feed.xml
+
+url: "https://iamjohnnyzhuang.github.io"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page:num/"
 markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-gist
