@@ -60,6 +60,7 @@ public class Solution {
 因此是进位因此我们再向左移动一位。即 (4 & 5) \<\<1 = 1000;最后把进位的和结果相加(^)即可(1000 ^ 001 = 1001)。
 
 {% highlight java%}
+
 /**  
  * Created by johnny on 16/6/13.  
  */  
@@ -77,8 +78,7 @@ public class Solution {
     public static void main(String[]() args) {  
         System.out.println(new Solution().getSum(1,2));  
     }  
-}  
-
+}
 
 {%endhighlight%}
 
