@@ -45,7 +45,34 @@ baseurl: ""
 paginate: 20
 per_page: 20
 paginate_path: "/page:num/"
+highlighter: pygments
 markdown: kramdown
 gems:
   - jekyll-paginate
   - jekyll-gist
+
+#阅读处理
+safe: false
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# 内容过滤
+show_drafts: null
+limit_posts: 0
+future:      true
+unpublished: false
+
+# 转换
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+
+kramdown:
+  input: GFM
+  extensions:
+    - autolink
+    - footnotes
+    - smart
+
+
