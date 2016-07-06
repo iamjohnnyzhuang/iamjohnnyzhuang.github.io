@@ -33,8 +33,6 @@ social:
 urls:
     - text: About Me
       url: /about/
-    - text: Projects
-      url: /projects/
     - text: Github
       url: https://github.com/iamjohnnyzhuang
     - text: XML Feed
