@@ -19,7 +19,7 @@ categories: [other]
 
 如图所示：
 
-<img src='https://iamjohnnyzhuang.github.io/public/upload/1.png'/>
+![](https://iamjohnnyzhuang.github.io/public/upload/1.png)
 
 这样我在文章中直接黏贴就ok了。代码实现非常简单一段简单的python代码。
 
@@ -53,9 +53,7 @@ if __name__ == '__main__':
 
 
 
-具体代码可以参考我的GitHub:
-
-https://github.com/iamjohnnyzhuang/my-alfred-workflow/blob/master/jekyllHighLight/highlight.py
+具体代码可以参考我的[GitHub](https://github.com/iamjohnnyzhuang/my-alfred-workflow/blob/master/jekyllHighLight/highlight.py)
 
 ----
 
@@ -68,8 +66,7 @@ https://github.com/iamjohnnyzhuang/my-alfred-workflow/blob/master/jekyllHighLigh
 同时，系统去遍历category这个目录获取所有的目录名称。如果检测到输入存在空格同时最后一个单词存在于category目录里面那么可以判定为输入结束。
 
 输入结束后，脚本会在用户设置的目录根据输入的文件名、类别创建文件并且填充如YAML头信息。同时调用shell打开文件。
-
-<img src='https://iamjohnnyzhuang.github.io/public/upload/2.png'/>
+![](https://iamjohnnyzhuang.github.io/public/upload/2.png)
 
 代码也是挺简单的。
 
@@ -123,9 +120,7 @@ if __name__ == '__main__':
 
  {% endhighlight %}
 
-具体代码可以参考我的GitHub：
-
-https://github.com/iamjohnnyzhuang/my-alfred-workflow/blob/master/JekyllPostGenerate/JekyllPostGenerate.py
+具体代码可以参考我的[GitHub](https://github.com/iamjohnnyzhuang/my-alfred-workflow/blob/master/JekyllPostGenerate/JekyllPostGenerate.py)
 
 
 
