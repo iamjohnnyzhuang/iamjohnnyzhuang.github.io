@@ -43,7 +43,7 @@ baseurl: ""
 paginate: 20
 per_page: 20
 paginate_path: "/page:num/"
-highlighter: pygments
+highlighter: rouge
 markdown: kramdown
 gems:
   - jekyll-paginate
