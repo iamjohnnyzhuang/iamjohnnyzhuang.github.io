@@ -2,7 +2,7 @@
  * Master styling
  */
 body {
-    font-family: "Roboto Condensed", Arial, sans-serif,"微软雅黑";
+    font-family: "微软雅黑","Roboto Condensed", Arial, sans-serif,"微软雅黑";
     background-color: #fff;
     font-size: 16px;
     line-height: 1.5em;
@@ -51,10 +51,17 @@ a, a:link, a:active {
     color: #8C8C8C;
 }
 
-p > a{
+
+p > a, p > a:link {
 	text-decoration: underline;
 	color: #B5B5B5;
 }
+
+p > a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
 
 a:hover {
     color: #B3B3B3;
