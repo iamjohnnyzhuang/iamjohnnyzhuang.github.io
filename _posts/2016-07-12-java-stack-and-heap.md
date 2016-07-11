@@ -49,20 +49,15 @@ categories: [java]
 
   如下代码以及图所示：
 
-  {% highlight java %}
-
+  ```java
   public static int runClassMethod(int i,long l,float f,double d,Object o,byte b) { 
-
      return 0;   
-
   }
 
-  ​
   public int runInstanceMethod(char c,double d,short s,boolean b) { 
          return 0;   
-  }{% endhighlight %}
-
-  ​
+  }
+  ```
 
   ​
 
@@ -75,15 +70,11 @@ categories: [java]
 
   和局部变量区一样，操作数栈也被组织成一个以字长为单位的数组。但和前者不同的是，它不是通过索引来访问的，而是通过入栈和出栈来访问的。可把操作数栈理解为存储计算时，临时数据的存储区域。下面我们通过一段简短的程序片段外加一幅图片来了解下操作数栈的作用。
 
-​	{% highlight java %}
-
-​	int a = 1;
-
-​	int b = 98;
-
-​	int c = a+b;	{% endhighlight %}
-
-
+```java
+	int a = 1;
+	int b = 98;
+	int c = a+b;	
+```
 
 ![](https://iamjohnnyzhuang.github.io/public/upload/4.png)
 
@@ -106,11 +97,18 @@ categories: [java]
 
   在前面就描述过：栈是由栈帧组成，每当线程调用一个java方法时，JVM就会在该线程对应的栈中压入一个帧，而帧是由局部变量区、操作数栈和帧数据区组成。那在一个代码块中，栈到底是什么形式呢？下面是我从《深入JVM》中摘抄的一个例子，大家可以看看：
 
-  {% highlight java %}
-
-  public class Main{    public static void addAndPrint(){        double result = addTwoTypes(1,88.88);        System.out.println(result);    }    public static double addTwoTypes(int i,double d){        return i + d;    }}
-
-  {% endhighlight %}
+  ```java
+  public class Main{    
+  	public static void addAndPrint(){      
+      	double result = addTwoTypes(1,88.88);    
+          System.out.println(result);    
+      }   
+      
+      public static double addTwoTypes(int i,double d){  
+      	return i + d;  
+      }
+  }
+  ```
 
   执行过程中的三个快照：
 
@@ -138,7 +136,7 @@ categories: [java]
 
 如果该局部变量是基本数据类型例如
 
-```
+```java
 int a = 1;
 ```
 
@@ -146,9 +144,8 @@ int a = 1;
 
 如果该局部变量是一个对象如
 
-```
+```java
 int[] array=new int[]{1,2};
-
 ```
 
 那么将引用存在栈中而对象({1,2})存储在堆内。
