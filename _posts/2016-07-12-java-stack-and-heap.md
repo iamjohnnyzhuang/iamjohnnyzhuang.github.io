@@ -19,23 +19,23 @@ categories: [java]
   - 栈内存用来存储局部变量和方法调用。
 
 
-  - 而堆内存用来存储Java中的对象。无论是成员变量，局部变量，还是类变量，它们指向的对象都存储在堆内存中。
+-   而堆内存用来存储Java中的对象。无论是成员变量，局部变量，还是类变量，它们指向的对象都存储在堆内存中。
 
-- 共享性不同
+-   共享性不同
 
-  - 栈内存是线程私有的。
-  - 堆内存是所有线程共有的。
+    - 栈内存是线程私有的。
+    - 堆内存是所有线程共有的。
 
-- 异常错误不同
+-   异常错误不同
 
-  如果栈内存或者堆内存不足都会抛出异常。
+    如果栈内存或者堆内存不足都会抛出异常。
 
-  - 栈空间不足：java.lang.StackOverFlowError。
-  - 堆空间不足：java.lang.OutOfMemoryError。
+    - 栈空间不足：java.lang.StackOverFlowError。
+    - 堆空间不足：java.lang.OutOfMemoryError。
 
-- 空间大小
+-   空间大小
 
-  栈的空间大小远远小于堆的。
+    栈的空间大小远远小于堆的。
 
 ---
 
@@ -93,38 +93,38 @@ categories: [java]
   为了处理java方法中的异常情况，帧数据区还必须保存一个对此方法异常引用表的引用。当异常抛出时，JVM给catch块中的代码。如果没发现，方法立即终止，然后JVM用帧区数据的信息恢复发起调用的方法的帧。然后再发起调用方法的上下文重新抛出同样的异常。
 
 
-- **栈的整个结构** 
+-    **栈的整个结构** 
 
-  在前面就描述过：栈是由栈帧组成，每当线程调用一个java方法时，JVM就会在该线程对应的栈中压入一个帧，而帧是由局部变量区、操作数栈和帧数据区组成。那在一个代码块中，栈到底是什么形式呢？下面是我从《深入JVM》中摘抄的一个例子，大家可以看看：
+     在前面就描述过：栈是由栈帧组成，每当线程调用一个java方法时，JVM就会在该线程对应的栈中压入一个帧，而帧是由局部变量区、操作数栈和帧数据区组成。那在一个代码块中，栈到底是什么形式呢？下面是我从《深入JVM》中摘抄的一个例子，大家可以看看：
 
-  ```java
-  public class Main{    
-  	public static void addAndPrint(){      
-      	double result = addTwoTypes(1,88.88);    
-          System.out.println(result);    
-      }   
-      
-      public static double addTwoTypes(int i,double d){  
-      	return i + d;  
-      }
-  }
-  ```
+     ```java
+     public class Main{    
+     	public static void addAndPrint(){      
+         	double result = addTwoTypes(1,88.88);    
+             System.out.println(result);    
+         }   
+         
+         public static double addTwoTypes(int i,double d){  
+         	return i + d;  
+         }
+     }
+     ```
 
-  执行过程中的三个快照：
+     执行过程中的三个快照：
 
-  ​
+     ​
 
-  ![](https://iamjohnnyzhuang.github.io/public/upload/5.png)
+     ![](https://iamjohnnyzhuang.github.io/public/upload/5.png)
 
-  ​
+     ​
 
-  ​
+     ​
 
-   上面所给的图，只想说明两件事情：
+      上面所给的图，只想说明两件事情：
 
-     1.  只有在调用一个方法时，才为当前栈分配一个帧，然后将该帧压入栈
+     1.  只有在调用一个方法时，才为当前栈分配一个帧，然后将该帧压入栈
 
-     2.  帧中存储了对应方法的局部数据，方法执行完，对应的帧则从栈中弹出，并把返回结果存储在**调用 方法的帧的操作数栈中**
+     1.  帧中存储了对应方法的局部数据，方法执行完，对应的帧则从栈中弹出，并把返回结果存储在**调用 方法的帧的操作数栈中**
 
 ---
 
@@ -173,4 +173,4 @@ int[] array=new int[]{1,2};
 # 参考资料
 
 1. [Difference between Stack and Heap memory in Java Read more](http://javarevisited.blogspot.com/2013/01/difference-between-stack-and-heap-java.html#ixzz4E72HyQCP)
-2. [[深入JVM——栈和局部变量](http://xtu-tja-163-com.iteye.com/blog/775987)]
+2. [深入JVM——栈和局部变量](http://xtu-tja-163-com.iteye.com/blog/775987)
