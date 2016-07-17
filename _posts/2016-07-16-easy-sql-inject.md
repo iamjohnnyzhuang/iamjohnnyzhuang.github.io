@@ -74,7 +74,7 @@ select * from table where user_name='';DROP DATABASE (DB NAME) --  'and pass_wo
 
 Java
 
-```
+```java
    return str.replaceAll(".*([';]+|(--)+).*", " ");
 ```
 
