@@ -1,5 +1,5 @@
 ---
-clayout: post
+layout: post
 title: 学会这些Shell命令就够了
 categories: [shell]
 ---
