@@ -38,6 +38,12 @@ urls:
     - text: XML Feed
       url: /feed.xml
 
+friends:
+    - text: hrwhisper
+      url: https://www.hrwhisper.me/
+    - text: Mmyton
+      url: http://www.mmyton.com/
+
 url: "https://iamjohnnyzhuang.github.io"
 baseurl: ""
 paginate: 20

@@ -133,6 +133,13 @@
                 {% for i in site.urls %}
                     &nbsp;&raquo; <a class="about" href="{{ i.url }}">{{ i.text }}</a><br />
                 {% endfor %}
+
+                <hr />
+                <strong>Friends Link</strong><br />
+                {% for i in site.friends %}
+                    &nbsp;&raquo; <a class="about" href="{{ i.url }}">{{ i.text }}</a><br />
+                {% endfor %}
+
               </div><!-- end /.fixed-condition -->
             </div>
 
