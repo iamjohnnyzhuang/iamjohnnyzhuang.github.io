@@ -52,7 +52,7 @@ http://yourdomain:1017
 
 Ubuntu下安装Nginx：
 
-``` bath
+``` bash
 sudo apt-get install nginx
 ```
 
@@ -60,7 +60,7 @@ sudo apt-get install nginx
 
 安装完后进入配置文件夹编辑default文件：
 
-``` bath
+``` bash
 cd /etc/nginx/sites-available && vi default 
 ```
 
@@ -68,7 +68,7 @@ cd /etc/nginx/sites-available && vi default
 
 在最后面添加: 
 
-``` bath
+``` bash
 server
 {
 #暴露给外部访问的端口
@@ -90,7 +90,7 @@ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
 接下来重启下Nginx让配置生效:
 
-``` bath
+``` bash
 nginx -s reload
 ```
 
