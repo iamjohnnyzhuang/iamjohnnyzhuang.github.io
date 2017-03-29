@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java堆和栈看这篇就够
+title: 《Effective Java》读书笔记
 categories: [java]
 ---
 
